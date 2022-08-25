@@ -1,0 +1,6 @@
+,Official.Symbol.Interactor.A,Official.Symbol.Interactor.B,Experimental.System,Experimental.System.Type,Author,Publication.Source,Throughput,BioGRID_ID_sumAB,BioGRID_ID_productAB,Organism.ID.Interactor.A,Organism.ID.Interactor.B,BioGRID.ID.Interactor.A,BioGRID.ID.Interactor.B,Evidence_count,experimental_system_count,publication_count
+1,ZC3H12A,ZC3H12D,Affinity Capture-MS,physical,Huang S (2015),PUBMED:26134560,Low Throughput,254145,16131963564,9606,9606,123141,131004,5,3,1
+2,ZC3H12A,ZC3H12D,Affinity Capture-Western,physical,Huang S (2015),PUBMED:26134560,Low Throughput,254145,16131963564,9606,9606,123141,131004,5,3,1
+3,ZC3H12D,ZC3H12A,Affinity Capture-Western,physical,Huang S (2015),PUBMED:26134560,Low Throughput,254145,16131963564,9606,9606,131004,123141,5,3,1
+4,ZC3H12A,ZC3H12D,Two-hybrid,physical,Huang S (2015),PUBMED:26134560,Low Throughput,254145,16131963564,9606,9606,123141,131004,5,3,1
+5,ZC3H12D,ZC3H12A,Two-hybrid,physical,Huang S (2015),PUBMED:26134560,Low Throughput,254145,16131963564,9606,9606,131004,123141,5,3,1

@@ -1,0 +1,144 @@
+
+
+##### 1. System requirements #####
+
+- Software dependencies: R, version compatible with the following additional packages:
+* caret 6.0-89
+* data.table 1.13.6
+* datasets 4.0.3
+* dplyr 1.0.3
+* gghighlight 0.3.1
+* ggplot2 3.3.3
+* ggrepel 0.9.0
+* lemon 0.4.5
+* Mleval 0.3
+* precrec 0.12.7
+* stringr 1.4.0
+
+- Tested in RStudio Version 1.4.1103, R version 4.0.3; MacOS 11.2.1
+- No non-standard hardware required
+
+##### 2. Installation guide #####
+
+- no installation required; simply execute scripts within indicated folders
+- Typical install time: N/A
+
+3. Demo
+
+- Instructions to run on data: see 4. Instructions for use
+
+- Expected output:
+Script A: 
+* Supplementary_Table_winnowing_mode.csv
+* unique_P4P1prime_sequence.csv
+* unique_P4P1prime_function.csv
+* unique_proteins_sequence.csv
+* unique_proteins_function.csv
+
+Script B: 
+* Supplementary_Table_whole_proteome_mode.csv
+
+Script C: 
+* orthologs.csv
+
+Script D:
+* Fig_1b.pdf
+* Fig_1c.pdf
+* Supplementary_Fig8h.pdf
+* Fig_1f.pdf
+
+Script E:
+* Fig_3a.pdf
+* Fig_3b.pdf
+* Fig_4a.pdf
+* Fig_4b.pdf
+* Fig_4c_left.pdf
+* Fig_4c_right.pdf
+* Fig_8c_8h.pdf
+* Fig_8d_8i.pdf
+* Fig_8e_8j.pdf
+* Fig_8k_full.pdf
+* Fig_8k.pdf
+* Supplementary_Fig.1.pdf
+* Supplementary_Fig2_GO_BP.pdf
+* Supplementary_Fig2_GO_MF.pdf
+* Supplementary_Fig2_GO_CC.pdf
+
+Script F:
+* Fig_8b_8g.pdf
+
+
+##### 4. Instructions for use #####
+
+SCRIPT A, SCRIPT A1 
+- To run scripts A and A1, the following files are required as input:
+* uniprot-proteome_UP000005640+reviewed_yes.tab           ## UniProtKB data
+* fimo_sensitivity_1.csv                                  ## output from FIMO (up to last known MALT1 cleavage site)
+* known_substrates.csv                                    ## known substrates of MALT1
+* GO_BP_string.csv                                        ## gene ontology enriched terms (biological process), exported from STRING
+* GO_MF_string.csv                                        ## gene ontology enriched terms (molecular function), exported from STRING
+* GO_CC_string.csv                                        ## gene ontology enriched terms (cellular compartment), exported from STRING 
+* InterPro_shell1.csv                                     ## interpro enriched terms, exported from STRING
+* BIOGRID-ORGANISM-Homo_sapiens-4.2.191.csv               ## human entries from BioGrid database
+* cleavage_sites.csv                                      ## known cleavage sites of MALT1
+* all_orthologs.csv                                       ## relationship between human/ mouse orthologs derived using Script C
+* cotransfection_assay_outcomes.csv                       ## outcome of experimental screen
+
+SCRIPT B
+- To run script B, the following files are required as input:
+As Script A, except:
+* fimo_bio.csv ; NOT fimo_sensitivity_1.csv               ## output from FIMO (>=1 cleavage site per protein in proteome)  
+
+SCRIPT C (for reproduction of orthologs.csv input file, used in SCRIPT A, B)
+- To run script C, the following files are required as input:
+* all_orthologs_161120.csv                                ## mouse / human orthology export from OMA (Ensemble format)
+* uniprot_reviewed_human_ensemble_161120.csv              ## UniProtKB data (human reviewed entries, must include Ensemble and UniProt IDs)
+* uniprot_reviewed_mouse_ensemble_161120.csv              ## UniProtKB data (mouse reviewed entries, must include Ensemble and UniProt IDs)
+* uniprot_unreviewed_human_ensemble_161120.csv            ## UniProtKB data (human unreviewed entries, must include Ensemble and UniProt IDs)
+* uniprot_unreviewed_mouse_ensemble_161120.csv            ## UniProtKB data (mouse unreviewed entries, must include Ensemble and UniProt IDs)
+
+- To run script D, the following files are required as input:
+* fimo_sensitivity_1.csv                                  ## output from FIMO (up to last known MALT1 cleavage site)
+* cleavage_sites.csv                                      ## known cleavage sites of MALT1
+
+- To run script E, the following files are required as input:
+* none, however Script A must have been run and output in workspace
+
+- To run script F, the following files are required as input:
+* none, however Script A1 must have been run and output in workspace
+
+- To run script G, the following files are required as input:
+* cleavage_sites_for_PSSM.csv
+
+- To run script H, the following files are required as input:
+* BIOGRID-GENE-107293-4.3.196_CASP10_human_only.tab3
+* BIOGRID-GENE-115328-4.3.196_TANK_human_only.tab3
+* BIOGRID-GENE-116527-4.3.196_CILK1.tab3
+* BIOGRID-GENE-129216-4.3.196_TAB3_human_only.tab3
+* BIOGRID-GENE-131004-4.3.196_ZC3H12D.tab3
+* BIOGRID-GENE-131074-4.3.196_ZC3H12B.tab3
+* BIOGRID-GENE-132364-4.3.196_ILDR2_human_only.tab3
+* BIOGRID-ORGANISM-Homo_sapiens-4.3.196.tab2.txt
+
+
+REPRODUCTION INSTRUCTIONS
+Supplementary Tables:
+- To reproduce Supplementary Table 1:                    ----- within Folder 1, run Script A
+- To reproduce Supplementary Table 3:                    ----- within Folder 1, run Script B
+- To reproduce Supplementary Table 4:                    ----- within Folder 2, run Script A
+- To reproduce Supplementary Table 5:                    ----- within Folder 2, run Script B 
+
+Figures:
+- To reproduce Fig 1b, c and f, Supplementary Fig 8h:    ----- within Folder 1, run Script D
+- To reproduce Fig 3a and b, Fig 4a, b and c, Fig 8c-e,
+  Fig 8h-i, Supplementary Fig 1, Supplementary Fig 3,
+  data to reproduce Supplementary Fig 2c and d:          ----- within Folder 1, run Script A, then Script E
+- To derive additional data to reproduce Fig 3c and d:   ----- within Folder 1, run Script A, clear workspace then run Script A1 
+- To reproduce Fig 8b and g:                             ----- within Folder 1, run Script A1, then Script F
+- To reproduce Fig 1e:                                   ----- within Folder 1, run Script G
+
+Reproduction of input files:
+- To reproduce 'orthologs.csv':                          ----- within Folder 3, run Script C
+- To reproduce input files used in Cytoscape:            ----- within Folder 4, run Script H
+
+

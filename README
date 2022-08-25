@@ -20,7 +20,7 @@
 
 ##### 2. Installation guide #####
 
-- no installation required; simply execute scripts within indicated folders
+- no installation required; simply execute scripts within indicated folders. Note - unzip BIOGRID-ORGANISM-Homo_sapiens-4.2.191.zip before use.
 - Typical install time: N/A
 
 3. Demo
@@ -79,7 +79,7 @@ SCRIPT A, SCRIPT A1
 * GO_MF_string.csv                                        ## gene ontology enriched terms (molecular function), exported from STRING
 * GO_CC_string.csv                                        ## gene ontology enriched terms (cellular compartment), exported from STRING 
 * InterPro_shell1.csv                                     ## interpro enriched terms, exported from STRING
-* BIOGRID-ORGANISM-Homo_sapiens-4.2.191.csv               ## human entries from BioGrid database
+* BIOGRID-ORGANISM-Homo_sapiens-4.2.191.csv               ## human entries from BioGrid database - unzip before use
 * cleavage_sites.csv                                      ## known cleavage sites of MALT1
 * all_orthologs.csv                                       ## relationship between human/ mouse orthologs derived using Script C
 * cotransfection_assay_outcomes.csv                       ## outcome of experimental screen
@@ -118,7 +118,7 @@ SCRIPT C (for reproduction of orthologs.csv input file, used in SCRIPT A, B)
 * BIOGRID-GENE-131004-4.3.196_ZC3H12D.tab3
 * BIOGRID-GENE-131074-4.3.196_ZC3H12B.tab3
 * BIOGRID-GENE-132364-4.3.196_ILDR2_human_only.tab3
-* BIOGRID-ORGANISM-Homo_sapiens-4.3.196.tab2.txt
+* BIOGRID-ORGANISM-Homo_sapiens-4.3.196.tab2.txt - unzip before use
 
 
 REPRODUCTION INSTRUCTIONS
